@@ -1,0 +1,56 @@
+{{>_admnavbar}}
+{{#each error}}
+    <div class="alert-danger">{{texto}}</div>
+{{else}}
+    
+{{/each}}
+
+<section class="_root_sectionForm">
+    <h3 class="_root_h3">Edit post</h3>
+
+
+   
+
+    <form class="_root_form" action="/admin/post/edit" enctype="multipart/form-data" method="post" id="formPost-sendPost">
+
+        <input type="hidden" value="{{post._id}}" name="id">
+        <input type="hidden" value="{{post.imageSrc}}" name="noImageFile">
+
+
+        <label for="editFile" id="formEditPost-chooseImage" class="_root_mainButton _root_--labelButton">Change image</label>
+        <div class="_root_positionRelative">
+            <label id="formEditPost-imageTag" class="_root_formLabel _root_--imageLabel" for="editFile">
+                <img class="_root_formLabelImage" src="{{post.imageSrc}}" alt="">
+            </label>
+        </div>
+        <input class="_root_formInput _root_displayNone" type="file" id="editFile" name="file">
+        <label for="editFile" class="_root_formNameFile" id="formEditPost-text">File selected: {{post.imageName}}</label>
+
+
+        <label class="_root_formLabel _root_displayNone" for="fileName">fileName:</label>
+        <input class="_root_formInput _root_displayNone" type="text" id="formEditPost-fileName" name="imageName" placeholder="File name" value="{{post.imageName}}">
+
+        <label class="_root_formLabel" for="formPost-title">Title:</label>
+        <input class="_root_formInput" type="text" name="title" placeholder="Post title" value="{{post.title}}" data-formpostTitle="" required>
+
+        <label class="_root_formLabel" for="formPost-slug">Slug:</label>
+        <input type="text" name="slug" placeholder="Slug name" class="_root_formInput _root_--gray" readonly value="{{post.slug}}" data-formpostSlug="" required>
+
+        <label class="_root_formLabel" for="description">Description:</label>
+        <textarea rows="5" id="description" class="_root_textArea" type="text" name="description" placeholder="Description" required>{{post.description}}</textarea>
+
+        <label class="_root_formLabel" for="content">Content:</label>
+        <textarea rows="10" id="content" class="_root_textArea" type="text" name="content" placeholder="Content" required>{{post.content}}</textarea>
+
+        <label class="_root_formLabel" for="category">Category:</label>
+        <select name="category" class="_root_formInput">
+            {{#each categories}}
+                <option value="{{_id}}">{{name}}</option>
+            {{else}}
+                <option value="0">Nenhuma categoria registrada</option>
+            {{/each}}
+        </select> 
+
+        <button type="submit" id="formPost-sendForm" class="_root_mainButton _root_--buttonForm">Edit post</button>
+    </form>
+</section>

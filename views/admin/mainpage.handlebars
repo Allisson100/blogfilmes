@@ -1,0 +1,41 @@
+{{>_admnavbar}}
+
+{{#each titlesubtitle}}
+<form class="mainpageForm" action="/admin/mainpage/savetitle" method="post">
+    <label for="title" class="_root_formLabel">Title:</label>
+    <input type="text" name="mpTitle" id="title" class="_root_formInput --mainpageInput" value="{{mpTitle}}" required>
+
+    <label for="subtitle" class="_root_formLabel ">Subtitle:</label>
+    <input type="text" name="mpSubtitle" id="subtitle" class="_root_formInput --mainpageInput" value="{{mpSubtitle}}" required>
+
+    <button type="submit" class="_root_mainButton  _root_--buttonForm _root_--bgButtonSubmit">Save Title and Subtitle</button>
+</form>
+{{/each}}
+
+{{#each mainpagebanner}}
+    <hr class="_root_hr">
+    <h3 class="_root_h3 --mainpageH3">Banners</h3>
+    <hr>
+    <form class="mainpageForm --marginBottom" enctype="multipart/form-data" action="/admin/mainpage/save" method="post">
+
+        <div class="mpInputsImages" data-mainDiv="">
+
+            <div class="mpBannerPreview">
+                
+                <label class="imageLabel" id="mpLabelImage" data-mpLabelImage="">
+                    {{#each bannerImageSrc}}
+                        <img src="{{this}}" alt="">
+                    {{/each}}
+                </label>
+
+                <div class="mpAlignButtons">        
+                    <label for="mpFile" id="mpChooseAnImage" class="_root_mainButton _root_--labelButton" data-inputSelected="inputImage">Change the Banners</label>
+                    <button type="submit" class="_root_mainButton _root_--bgButtonSubmit">Save Banners</button>
+                </div>
+
+                <input class="_root_formInput _root_displayNone" type="file" id="mpFile" name="file" data-teste="" multiple required>
+
+            </div>
+        </div>
+    </form>
+{{/each}}

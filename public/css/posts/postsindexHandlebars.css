@@ -1,0 +1,63 @@
+/* This CSS is about the posts from the swiper */
+
+.post {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.post h2 {
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+}
+
+.post img {
+    border-radius: 2rem;
+    height: 40%;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    width: 35%;
+}
+
+.post p {
+    color: var(--main-text-color);
+    font-family: var(--secundary-font);
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    text-align: justify;
+    white-space: pre-wrap;
+}
+
+@media screen and (max-width: 1300px) {
+    .post {
+        padding: 3rem;
+    }
+
+    .post img {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .post {
+        padding: 1rem;
+    }
+
+    .post h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .post {
+        padding: 1rem;
+    }
+
+    .post h2 {
+        font-size: 2.5rem;
+    }
+}

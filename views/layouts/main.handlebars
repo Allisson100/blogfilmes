@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{!-- Reset --}}
+        <link rel="stylesheet" href="/css/reset.css">
+
+    {{!-- Fonts --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    {{!-- Icon --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{!-- Slider --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
+    {{!-- WebSite CSS --}}
+        <link rel="stylesheet" href="/css/root.css">
+
+        <link rel="stylesheet" href="/css/indexHandlebars.css">
+        <link rel="stylesheet" href="/css/aboutHandlebars.css">
+
+        <link rel="stylesheet" href="/css/navbar/_admnav-_navbarHandlebars.css">
+
+        <link rel="stylesheet" href="/css/adm/addHandlebars.css">
+
+        <link rel="stylesheet" href="/css/categories/categoriesHandlebars.css">
+        <link rel="stylesheet" href="/css/categories/addcategoryHandlebars.css">
+        <link rel="stylesheet" href="/css/categories/editcategoriesHandlebars.css">
+
+        <link rel="stylesheet" href="/css/posts/postsHandlebars.css">
+        <link rel="stylesheet" href="/css/posts/addpostsHandlebars.css">
+        <link rel="stylesheet" href="/css/posts/editpotsHandlebars.css">
+
+        <link rel="stylesheet" href="/css/mainpage/mainpageHandlebars.css">
+
+        <link rel="stylesheet" href="/css/msg/msg.css">
+        <link rel="stylesheet" href="/css/swiper/swiper.css">
+
+        {{!-- The handlebars file about that CSS can be find in the views/posts folder path --}}
+        <link rel="stylesheet" href="/css/posts/postsindexHandlebars.css">
+
+    
+
+    <title>Blog Filmes</title>
+</head>
+
+<body>
+    {{>_msg}}
+    {{{body}}}
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script src="/js/sliderOpacity.js"></script>
+    <script src="/js/slug.js"></script>
+    <script src="/js/preview/addPost.js"></script>
+    <script src="/js/preview/editPost.js"></script>
+    <script src="/js/preview/mainpage.js" type="module"></script>
+</html>

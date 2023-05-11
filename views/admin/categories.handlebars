@@ -1,0 +1,27 @@
+{{>_admnavbar}}
+<div class="_root_alignElements --categoriesAlignElements">
+    <h3 class="_root_h3">Categories list</h3>
+    <a href="/admin/categories/add"><button class="_root_mainButton">Create new category</button></a>
+</div>
+
+{{#each categories}}
+<article class="_root_article">
+    <div class="_root_databaseCard">
+        <h5 class="_root_h5">{{name}}</h5>
+        <small class="_root_small">Slug: {{slug}}</small>
+        <small class="_root_small">Creation date: {{date}}</small>
+
+        <div class="_root_alignButtons">
+            <a href="/admin/categories/edit/{{_id}}"><button class="_root_secundaryButton">Edit category</button></a>
+
+            <form action="/admin/categories/delete" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="_root_secundaryButton">Delete category</button>
+            </form>
+        </div>
+    </div>
+</section>
+    
+{{else}}
+    <h4 class="_root_h4 --categoriesH4">There is no registered category</h4>
+{{/each}}

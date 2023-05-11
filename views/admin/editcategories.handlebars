@@ -1,0 +1,21 @@
+{{>_admnavbar}}
+{{#each error}}
+    <div class="alert-danger">{{texto}}</div>
+{{else}}
+    
+{{/each}}
+
+<section class="_root_sectionForm">
+    <h3 class="_root_h3">Edit Category</h3>
+    <form class="_root_form" action="/admin/categories/edit" method="POST">
+
+        <input type="hidden" name="id" value="{{category._id}}">
+        <label class="_root_formLabel" for="name">Name:</label>
+        <input type="text" name="name" placeholder="Category name" class="_root_formInput" value="{{category.name}}" data-formpostTitle="">
+
+        <label class="_root_formLabel" for="name">Slug:</label>
+        <input type="text" name="slug" placeholder="Slug name" class="_root_formInput _root_--gray" readonly value="{{category.slug}}" data-formpostSlug="">
+
+        <button type="submit" class="_root_mainButton _root_--buttonForm">Edit category</button>
+    </form>
+</section>

@@ -1,0 +1,20 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+
+.about p{
+    color: var(--main-text-color);
+    font-size: var(--main-font);
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    text-align: justify;
+    white-space: pre-wrap;
+}
+
+.--aboutH2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,101 @@
+.imageLabel {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.mainpageForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.mpAlignButtons {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.mpAlignButtons div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    row-gap: .5rem;
+}
+
+.mpAlignButtons div h4 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mpBannerPreview {
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1.5rem .5rem .5rem .5rem;
+    row-gap: 1.5rem;
+    width: 80%;
+}
+
+.mpInputsImages {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.mpInputsImages img {
+    border-radius: 1.5rem;
+    height: 20%;
+    width: 45%;
+}
+
+/* Variations */
+
+.--marginBottom {
+    margin-bottom: 5rem;
+}
+
+.--mainpageH3 {
+    font-size: 5rem;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.--mainpageInput {
+    width: 80%;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .mpAlignButtons {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .imageLabel {
+       flex-direction: column;
+    }
+
+    .mpInputsImages img {
+        border-radius: 1.5rem;
+        height: 100%;
+        width: 90%;
+    }
+}
+

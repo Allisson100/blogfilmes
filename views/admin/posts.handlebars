@@ -1,0 +1,30 @@
+{{>_admnavbar}}
+<div class="_root_alignElements --postsAlignElements">
+    <h3 class="_root_h3">Posts list</h3>
+    <a href="posts/add"><button class="_root_mainButton">Create new post</button></a>
+</div>
+
+
+{{#each posts}}
+    <article class="_root_article">
+        <div class="_root_databaseCard">
+            <h4 class="_root_h4 --postsH4">{{title}}</h4>
+            <h5 class="_root_h5 --postsH5">Description:</h5>
+            <p class="db-description">{{description}}</p>
+            <small class="_root_small">Date: {{date}}</small>
+            <small class="_root_small">Category: {{category.name}}</small>
+
+            <div class="_root_alignButtons">
+                <a href="/admin/post/edit/{{_id}}"><button class="_root_secundaryButton">Edit post</button></a>
+
+                <form action="/admin/posts/delete" method="POST">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button type="submit" class="_root_secundaryButton">Delete post</button>
+                </form>
+            </div>
+        </div>
+    </article>
+
+{{else}}
+    <h4 class="_root_h4 --postsH4">There is no registered posts</h4>
+{{/each}}

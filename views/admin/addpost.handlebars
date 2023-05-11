@@ -1,0 +1,49 @@
+{{>_admnavbar}}
+{{#each error}}
+    <div class="alert-danger">{{texto}}</div>
+{{else}}
+    
+{{/each}}
+
+<section class="_root_sectionForm">
+    <h3 class="_root_h3">New post</h3>
+
+    <form class="_root_form" action="/admin/post/new" enctype="multipart/form-data" method="post" id="formPost-sendPost">
+
+        <label for="file" id="formPost-chooseImage" class="_root_mainButton _root_--labelButton">Choose an image</label>
+        <div class="_root_positionRelative">
+            <label id="formPost-imageTag" class="_root_formLabel _root_--imageLabel" for="file">
+
+            </label>
+        </div>
+        <input class="_root_formInput _root_displayNone" type="file" id="file" name="file" required>
+        <label for="file" class="_root_formNameFile" id="formPost-text">No image selected ...</label>
+
+
+        <label class="_root_formLabel _root_displayNone" for="fileName">fileName:</label>
+        <input class="_root_formInput _root_displayNone" type="text" id="formPost-fileName" name="imageName" placeholder="File name" required readonly>
+
+        <label class="_root_formLabel" for="formPost-title">Title:</label>
+        <input class="_root_formInput" type="text" name="title" placeholder="Post title" required data-formpostTitle="">
+
+        <label class="_root_formLabel" for="formPost-slug">Slug:</label>
+        <input type="text" name="slug" placeholder="Slug name" class="_root_formInput _root_--gray" data-formpostSlug="" readonly>
+
+        <label class="_root_formLabel" for="description">Description:</label>
+        <textarea rows="5" id="description" class="_root_textArea" type="text" name="description" placeholder="Description" required></textarea>
+
+        <label class="_root_formLabel" for="content">Content:</label>
+        <textarea rows="10" id="content" class="_root_textArea" type="text" name="content" placeholder="Content" required></textarea>
+
+        <label class="_root_formLabel" for="category">Category:</label>
+        <select name="category" class="_root_formInput">
+            {{#each categories}}
+                <option value="{{_id}}">{{name}}</option>
+            {{else}}
+                <option value="0">Nenhuma categoria registrada</option>
+            {{/each}}
+        </select> 
+
+        <button type="submit" id="formPost-sendForm" class="_root_mainButton _root_--buttonForm">Create post</button>
+    </form>
+</section>

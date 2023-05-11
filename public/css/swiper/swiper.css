@@ -1,0 +1,172 @@
+.swiper-container {
+    height: 450px;
+    overflow: hidden;
+    transition: all 1000ms;
+    width: 100%;
+}
+
+.swiper-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-wrapper img {
+    border-radius: 10px;
+    cursor: pointer;
+    height: 400px;
+    transition: .5s;
+    width: 300px;
+}
+
+.swiper-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+/* ---- Button Prev ---- */
+
+.button-prev {
+    background-color: var(--main-bg-color);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    height: 400px;
+    opacity: .5;
+    position: absolute;
+    top: 157px;
+    transition: opacity 800ms;
+    width: 60px;
+    z-index: 1;
+}
+
+.button-prev:last-child {
+    top: 500px;
+}
+  
+.button-prev:hover {
+    opacity: 0.8;
+}
+  
+.button-prev span {
+    background-color:var(--secundary-bg-color);
+    border-radius: 5px;
+    height: 40px;
+    left: 19px;
+    margin: 6px;
+    position: absolute;
+    width: 10px;
+    z-index: 2;
+}
+  
+.button-prev span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 48%;
+}
+  
+.button-prev span:nth-child(2) {
+    transform: rotate(45deg);
+    top: 42.5%;
+}
+
+/* ---- Button Next ---- */
+  
+.button-next {
+    background-color: var(--main-bg-color);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    height: 400px;
+    left: calc(100% - 60px);
+    opacity: .5;
+    position: absolute;
+    top: 157px;
+    transform: rotate(180deg);
+    transition: opacity 800ms;
+    width: 60px;
+    z-index: 1;
+}
+  
+.button-next:hover {
+    opacity: 0.9;
+}
+  
+.button-next span {
+    background-color: var(--secundary-bg-color);
+    border-radius: 5px;
+    height: 40px;
+    left: 19px;
+    margin: 6px;
+    position: absolute;
+    width: 10px;
+    z-index: 2;
+}
+  
+.button-next span:nth-child(1) {
+    top: 47%;
+    transform: rotate(-45deg);
+}
+  
+.button-next span:nth-child(2) {
+    top: 41.5%;
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .button-prev {
+        display: none;
+    }
+
+    .button-next {
+        display: none;
+    }
+
+    .swiper-container {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .swiper-wrapper img {
+        border-radius: 10px;
+        cursor: pointer;
+        height: 150px;
+        transition: .5s;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 750px){
+    .swiper-wrapper img {
+        border-radius: 10px;
+        cursor: pointer;
+        height: 200px;
+        transition: .5s;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1000px){
+    .swiper-wrapper img {
+        border-radius: 10px;
+        cursor: pointer;
+        height: 250px;
+        transition: .5s;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px){
+    .swiper-wrapper img {
+        border-radius: 10px;
+        cursor: pointer;
+        height: 300px;
+        transition: .5s;
+        width: 90%;
+    }
+}

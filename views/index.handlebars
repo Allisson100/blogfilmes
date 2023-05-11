@@ -1,0 +1,46 @@
+{{>_navbar}}
+<main class="index">
+    <section class="background" id="flag">
+        <div class="background-effects">
+            {{!-- Seja Bem-Vindo ao Blog Filmes
+            Se você gosta muito de filmes está no local certo --}}
+
+            <h2 class="_root_h2">{{titlesubtitle.mpTitle}}</h2>
+            <h4 class="_root_h4 --indexMarginTop">{{titlesubtitle.mpSubtitle}}</h4>
+
+            <figure class="carousel">
+                {{#each mainpagebanner.bannerImageSrc}}
+                    <img class="carrousel-image selected" src="{{this}}" alt="">
+                {{else}}
+                    <img class="carrousel-image selected" src="/img/banner/hp.png" alt="Banner Harry potter">
+                    <img class="carrousel-image" src="/img/banner/hg.png" alt="Banner Jogos Vorazes">
+                    <img class="carrousel-image" src="/img/banner/vf.png" alt="Banner Velozes e furioso">
+                {{/each}}
+            </figure>
+        </div>
+    </section>
+
+    {{!-- {{#if posts}} --}}
+        <section class="swiper">
+            <h2 class="_root_h2 --indexSwiper">Movies</h2>
+            <hr>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {{#each posts}}
+                        <div class="swiper-slide">
+                            <a href="/posts/{{slug}}"><img src={{imageSrc}} alt="Movie"></a>
+                        </div>
+                    {{/each}}
+                </div>
+
+                <div class="button-prev"><span></span><span></span></div>
+                <div class="button-next"><span></span><span></span></div>
+            </div>
+        </section>
+    {{!-- {{/if}} --}}
+
+</main>
+
+<footer>
+    
+</footer>

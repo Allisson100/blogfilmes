@@ -1,0 +1,21 @@
+.db-description {
+    color: var(--main-text-color);
+    font-family: var(--secundary-font);
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin: 1rem 0 1rem 0;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.--postsH4 {
+    font-size: 2rem;
+}
+
+.--postsH5 {
+    font-size: 1.5rem;
+}
+
+.--postsAlignElements {
+    column-gap: 21.7%;
+}
