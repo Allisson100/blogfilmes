@@ -14,6 +14,16 @@
     white-space: pre-wrap;
 }
 
+.about p a {
+    color: inherit;
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.about p a:hover {
+    color: #b21515;
+}
+
 .--aboutH2 {
     font-size: 3rem;
     margin-bottom: 2rem;
